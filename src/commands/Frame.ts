@@ -128,6 +128,7 @@ async function postFrame() {
     client.sendingMessage = false;
     // Wait a bit so the keys are registered
     if (reactionsLoaded) {
+      Log.info('postNewFrame1');
       setTimeout(postNewFrame, 500);
     }
   });
@@ -139,6 +140,7 @@ async function postFrame() {
   Promise.all(reactionsPromise).then(() => {
     reactionsLoaded = true;
     if (!client.sendingMessage) {
+      Log.info('postNewFrame2');
       postNewFrame();
     }
   });
