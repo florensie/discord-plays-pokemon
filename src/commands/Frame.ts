@@ -128,7 +128,7 @@ async function postFrame() {
     client.sendingMessage = false;
     // Wait a bit so the keys are registered
     if (reactionsLoaded) {
-      setTimeout(postNewFrame, 2000);
+      setTimeout(postNewFrame, 500);
     }
   });
 
