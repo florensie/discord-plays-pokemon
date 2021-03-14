@@ -139,11 +139,11 @@ async function postFrame() {
   );
   Promise.all(reactionsPromise).then(() => {
     reactionsLoaded = true;
-    if (!client.sendingMessage) {
-      Log.info('postNewFrame2');
-      postNewFrame();
-    }
   });
+  if (!client.sendingMessage) {
+    Log.info('postNewFrame2');
+    postNewFrame();
+  }
 }
 
 function postNewFrame() {
